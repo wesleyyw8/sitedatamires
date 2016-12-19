@@ -5,14 +5,51 @@
   <link rel="stylesheet" type="text/css" href="/bower_components/foundation-sites/dist/css/foundation.min.css">
 
 </head>
-<body>
-  <div class="index">
-    awdwadawdawdawd
+<body ng-app="tamiresApp">
+  <div class="index" ng-controller="indexController">
+    <div class="small-2 columns text-left">
+      <ul class="vertical menu" data-accordion-menu>
+        <li>
+          <a href="#">Part 1</a>
+          <ul class="menu vertical nested">
+            <li><a href="/#!/languages">Languages</a></li>
+            <li><a href="/#!/problems">Problems</a></li>
+            <li><a href="/#!/questions">Questions</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Part 2</a>
+          <ul class="menu vertical nested">
+            <li><a href="#">Graph</a></li>
+            <li><a href="#">Write up</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Useful websites</a>
+          <ul class="menu vertical nested">
+            <li><a href="#">link 1</a></li>
+            <li><a href="#">link 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="small-10 columns text-center">
+      <div class="callout large primary">
+        <div class="row column text-center">
+          <h2 class="subheader">{{title}}</h2>
+        </div>
+      </div>
+      <div ng-view></div>
+    </div>
   </div>
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/foundation-sites/dist/js/foundation.min.js"></script>
-  <!-- <script src="bower_components/angular/angular.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="../application.js"></script> -->
+  <script src="../controllers/index.js"></script>
+  <script src="../controllers/config.js"></script>
 </body>
 </html>
