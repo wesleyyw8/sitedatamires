@@ -14,6 +14,9 @@ app.controller('indexController', ['$scope','$location', function($scope, $locat
   		  case "/questions":
   		    $scope.title = "Questions";
   		    break; 
+        case "/graph":
+          $scope.title = "Graph";
+          break; 
   		  default: 
   		    $scope.title = ""; break;
   		}

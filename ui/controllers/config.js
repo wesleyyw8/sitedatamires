@@ -9,6 +9,9 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider,$loca
     when('/questions', {
       templateUrl: '../views/questions.html'
     }).
+    when('/graph', {
+      templateUrl: '../views/graph.html'
+    }).
     otherwise({
       redirectTo: '/languages'
     });
